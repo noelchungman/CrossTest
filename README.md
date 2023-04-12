@@ -4,6 +4,7 @@ https://kotlinlang.org/docs/multiplatform-mobile-create-first-app.html#create-th
 
 Notes:
 A. Reverse String
+
 class Greeting {
     private val platform: Platform = getPlatform()
 
@@ -11,8 +12,11 @@ class Greeting {
         return "Guess what it is! > ${platform.name.reversed()}!"
     }
 }
+
 B. Add to New Year Days
+
 i. Navigate to the build.gradle.kts file in the shared directory.
+
 2. Add the following dependency to the commonMain source set dependencies:
 kotlin {
     sourceSets {
@@ -24,7 +28,9 @@ kotlin {
     }
 }
 3. Synchronize the Gradle files by clicking Sync Now in the notification.
+
 4. In shared/src/commonMain/kotlin, create a new file NewYear.kt in the project folder.
+
 5. Update the file with a short function that calculates the number of days from today until the New Year using the date-time date arithmetic:
 
 import kotlinx.datetime.*
@@ -34,6 +40,7 @@ fun daysUntilNewYear(): Int {
     val closestNewYear = LocalDate(today.year + 1, 1, 1)
     return today.daysUntil(closestNewYear)
 }
+
 6. In Greeting.kt, update the greet() function to see the result:
 
 class Greeting {
@@ -44,5 +51,7 @@ class Greeting {
                 "\nThere are only ${daysUntilNewYear()} days left until New Year! 🎆"
     }
 }
+
 C. Get method
+
 Global search comment: "Show get method got content" will show the steps
