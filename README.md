@@ -15,7 +15,7 @@ class Greeting {
 
 B. Add to New Year Days
 
-i. Navigate to the build.gradle.kts file in the shared directory.
+1. Navigate to the build.gradle.kts file in the shared directory.
 
 2. Add the following dependency to the commonMain source set dependencies:
 kotlin {
